@@ -4,12 +4,43 @@
 	<title>Car Detail</title>
 </head>
 <body>
-		<h1>
-			{{car.make}} - {{car.model}}
-			<small>
-				{{car.year}}
-			</small>
-		</h1>
-		<hr>
+
 </body>
 </html>
+
+
+{% extends "base.html" %}
+
+{% block title %}Car Detail{% endblock title %}
+
+
+{% block content %}
+
+<div class = "details-body">
+	{% if car.car_img %}
+	<img src="{{car.car_img.url}}" class="img-fluid" alt="Responsive image">
+	{% endif %}
+    <h1 id = "details-name">{{car.make}}</h1>
+    <div class = "details-desc ">
+        <p class="details-desc-lb mt-4">
+        	<h1>
+	        	{{car.make}} - {{car.model}}
+	        	<small>
+					{{car.year}}
+				</small>
+			</h1>
+    	</p>
+    	<div class = "text-right">
+	        <a href="{% url 'car-update' car.id %}">
+	        <button type="button" class="btn btn-primary btn-lg">Update <span class="far fa-edit"></button>
+	        </a>
+	        <a href="{% url 'car-delete' car.id %}">
+	            <button type="button" class="btn btn-danger btn-lg mx-3">Delete <span class="fas fa-trash"></button>
+	        </a>
+	    </div>
+    </div>
+    
+</div>
+{% endblock content %}
+
+

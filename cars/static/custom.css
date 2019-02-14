@@ -1,0 +1,79 @@
+
+
+body {
+	background-color: #13435D;
+	color: white;
+	font-family: 'Roboto', sans-serif;
+}
+
+div.card-body {
+  // Enable `flex-grow: 1` for decks and groups so that card blocks take up
+  // as much space as possible, ensuring footers are aligned to the bottom.
+	padding: $card-spacer-x;
+	color: $card-color;
+	/*background-color: #783816;*/
+	background-color: #5C33AE;
+}
+
+h2.card-title {
+	text-align: center;
+	color: white;
+	font-weight: 300;
+	font-family: 'Poppins', sans-serif;
+}
+
+div.details-body {
+	color: white;
+	margin: 20px;
+}
+
+h1#details-name {
+	border-bottom: solid 1px;
+}
+
+div.details-desc {
+	/*border: solid;*/
+	font-size: 1.3em;
+	font-weight: lighter;
+}
+
+
+img.card-img-top {
+	width:100%;
+    height: auto;
+    max-height: 280px;
+    overflow: : hidden;
+    object-fit: cover; 
+}
+
+.details-desc-lb {
+	font-weight: bold;
+	border-left: 5px solid;
+	padding-left: 0.5rem;
+}
+
+p.details-desc-lb {
+
+	font-weight: normal;
+}
+
+.col-form-label {
+	border-top: 2px solid white;
+	font-size: 1.3em;	
+	margin-top: 20px;
+}
+
+.textinput, .textarea {
+	width: auto;
+	display: flow;
+}
+
+h1.car-list {
+	border-bottom: 1px solid #E2B6C1;
+	padding-bottom: 10px;
+}
+
+
+a:hover {
+	color: #E2B6C1;
+}
