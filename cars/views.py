@@ -28,12 +28,13 @@ def car_create(request):
 		form = CarForm(request.POST, request.FILES or None)
 		if form.is_valid():
 			form.save()
+			messages.success(request,'an item has been created.')
 			return redirect('car-list')
 	context = {
 		"form": form,
 	}
 
-	messages.success(request,'an item has been created.')
+	
 	return render(request, 'create.html', context)
 
 
@@ -45,12 +46,12 @@ def car_update(request, car_id):
 		form = CarForm(request.POST,request.FILES or None, instance=car_obj)
 		if form.is_valid():
 			form.save()
+			messages.info(request,'an item has been updated.')
 			return redirect('car-list')
 	context = {
 		"car_obj": car_obj,
 		"form": form,
 	}
-	messages.info(request,'an item has been updated.')
 	return render(request, 'update.html', context)
 
 
